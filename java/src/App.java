@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import model.Administrador;
-import model.Pessoa;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -43,7 +42,7 @@ public class App {
                 Administrador adm = new Administrador();
                 adm.setNome(nome);
                 adm.setEmail(email);
-                adm.setNome_social(nomeSocial);
+                adm.setNomeSocial(nomeSocial);
                 adm.setSenha(senha);
                 adm.setDataNascimento(dataNascimento);
                 adm.setGenero(genero);

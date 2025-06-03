@@ -11,6 +11,10 @@ public class Paciente extends Pessoa{
         super(id, nome, nome_social, email, senha);
     }
 
+    public Paciente(int id, String nome, String email, String senha){
+        super(id, nome, email, senha);
+    }
+
     public String getMedicacao() {
         return this.medicacao;
     }
