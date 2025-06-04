@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import model.Administrador;
+import model.Paciente;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -59,7 +60,18 @@ public class App {
                 adm.registraLogin();
                 arquivo.writeInsertStartment(adm.toStringSql());
             } else if(resposta.equalsIgnoreCase("p")){
-                // settar em paciente
+                Paciente pac = new Paciente();
+
+                System.out.println("Digite as medicações: ");
+                pac.setMedicacao(sc.nextLine());
+
+                System.out.println("Digite as doenças/condições/alergias: ");
+                pac.setDoenca(sc.nextLine());
+
+                System.out.println("Digite seu tipo sanguíneo: ");
+                pac.setMedicacao(sc.nextLine());
+
+                arquivo.writeInsertStartment(pac.toStringSql());
             }else{
                 System.err.println("Informe uma opção válida!");
             }
