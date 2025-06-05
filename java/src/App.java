@@ -61,12 +61,6 @@ public class App {
                 arquivo.writeInsertStartment(adm.toStringSql());
             } else if(resposta.equalsIgnoreCase("p")){
                 Paciente pac = new Paciente();
-                pac.setNome(nome);
-                pac.setEmail(email);
-                pac.setNomeSocial(nomeSocial);
-                pac.setSenha(senha);
-                pac.setDataNascimento(dataNascimento);
-                pac.setGenero(genero);
 
                 System.out.println("Digite as medicações: ");
                 pac.setMedicacao(sc.nextLine());
@@ -75,7 +69,7 @@ public class App {
                 pac.setDoenca(sc.nextLine());
 
                 System.out.println("Digite seu tipo sanguíneo: ");
-                pac.setTipoSanguineo(sc.nextLine());
+                pac.setMedicacao(sc.nextLine());
 
                 arquivo.writeInsertStartment(pac.toStringSql());
             }else{
