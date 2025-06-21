@@ -44,7 +44,17 @@ public class Paciente extends Pessoa{
         return super.toString()+". Medicações: "+this.medicacao+". Doenças: "+this.doenca+". Tipo sanguíneo: "+this.tipo_sanguineo;
     }
     
-    public String toStringSql(){
-        return super.toStringSql()+"INSERT INTO paciente (medicacao, doenca, tipoSanguineo) VALUES ('"+this.medicacao+"', '"+this.doenca+"', '"+this.tipo_sanguineo+"');\n";
+    @Override
+    public String toStringSql() {
+        return "INSERT INTO paciente (nome, nome_social, email, senha, data_nascimento, genero, medicacao, doenca, tipo_sanguineo) VALUES ('"+ getNome() + "', '"
+            + getNomeSocial() + "', '"
+            + getEmail() + "', '"
+            + getSenha() + "', '"
+            + getDataNascimento() + "', '"
+            + getGenero() + "', '"
+            + medicacao + "', '"
+            + doenca + "', '"
+            + tipo_sanguineo + "');\n";
     }
+
 }
